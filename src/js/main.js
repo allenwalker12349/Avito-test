@@ -22,11 +22,10 @@
 				currentCard.querySelector('.card-title').innerText = item.title;
 				currentCard.querySelector('.card-price').innerText = item.price;
 				currentCard.querySelector('.card-adress').innerText = item.address;
-				fragment.appendChild(currentCard);
+				currentCard.querySelector('.btn-primary').href = 'item-page.html#' + item.id;
+				fragment.appendChild(currentCard,);
 			});
 			document.querySelector('.row').appendChild(fragment);
-
-			console.log(cardsInfo)
 		} else {
 			console.log('провал')
 		}

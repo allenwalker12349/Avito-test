@@ -22,8 +22,8 @@ const cssFiles = [
 ]
 //Порядок подключения js файлов
 const jsFiles = [
-   './src/js/lib.js',
-   './src/js/main.js'
+   './src/js/main.js',
+   './src/js/inner-page.js'
 ]
 
 //Таск на стили CSS
@@ -55,8 +55,6 @@ function scripts() {
    //Шаблон для поиска файлов JS
    //Всей файлы по шаблону './src/js/**/*.js'
    return gulp.src(jsFiles)
-   //Объединение файлов в один
-   .pipe(concat('script.js'))
    //Выходная папка для скриптов
    .pipe(gulp.dest('./build/js'))
    .pipe(browserSync.stream());
